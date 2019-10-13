@@ -3,7 +3,17 @@ import '../stylesheets/App.css';
 
 class Chatroom extends React.Component {
   state = {
+    messageText: ""
+  }
 
+  handleChange(event) {
+    console.log(event.target.value)
+    event.preventDefault()
+  }
+  
+  subMessage(event) {
+    this.setState({ messageText: event.target.value })    
+    event.preventDefault()
   }
 
 
@@ -16,10 +26,11 @@ class Chatroom extends React.Component {
           </section>
         </article>
         <article id="text-input" >
-          <form className="centered-input">
-            <textarea className="textarea-styles">
+          <form className="centered-input" onSubmit={this.subMessage}>
+            <textarea className="textarea-styles" onChange={this.handleChange}/>
+            <button type="button" id="submit-button">
 
-            </textarea>
+            </button>
           </form>
         </article>
       </>
