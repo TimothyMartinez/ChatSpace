@@ -35,10 +35,24 @@
 #chat-room {
   background-color: white;
   display: flex;
+  overflow: scroll;
+  flex-direction: column;
   justify-content: center;
   place-items: center;
-  height: 100%;
+  height: 46vh;
   width: 80%;
+}
+
+.message {
+  background-color: white;
+  width: -webkit-fill-available;
+  height: 10vh;
+  display: flex;
+  color: black;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vw;
 }
 
 /*  TEXTBOX STYLES  */

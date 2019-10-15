@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Message = () => {
+const Message = (props) => {
   return(
-    <header id="header-wrapper">
-      <div>
-        <h1 className="title" >Chatspace</h1>
-      </div>
-    </header>
+    <section className="message">
+      <span>{props.now}</span>
+      <h1 className="title" >{props.text}</h1>
+    </section>
   )
 }
 
